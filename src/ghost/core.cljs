@@ -129,6 +129,7 @@
 (defn send-keys [s k] (.sendKeys *casper* (name s) k))
 
 (defn start
+  ([] (.start *casper*))
   ([url] (.start *casper* url))
   ([url f] (.start *casper* url f)))
 
