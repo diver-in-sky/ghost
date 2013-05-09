@@ -126,6 +126,8 @@
 
 (defn set-http-auth [u p] (.setHttpAuth *casper* u p))
 
+(defn send-keys [s k] (.sendKeys *casper* (name s) k))
+
 (defn start
   ([url] (.start *casper* url))
   ([url f] (.start *casper* url f)))
